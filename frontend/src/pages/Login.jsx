@@ -19,7 +19,13 @@ export default function Login() {
       toast.success(`Welcome back, ${user.name.split(' ')[0]}`);
       navigate(from);
     } catch (err) {
-      toast.error(err.response?.data?.message || 'Invalid credentials');
+      // If there's no response from the server, it's likely a CORS or network issue.
+      if (!err.response) {
+        toast.error('Network Error: Could not reach the server. Please check deployment configuration.');
+      } else {
+        // Otherwise, display the error message from the server.
+        toast.error(err.response.data.message || 'Invalid credentials');
+      }
     } finally { setLoading(false); }
   };
 
