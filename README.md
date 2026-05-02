@@ -136,6 +136,8 @@ cd ../frontend && npm install
 
 ### 2. Configure Environment
 
+#### a. Backend `.env` file
+
 ```bash
 cd backend
 cp .env.example .env
