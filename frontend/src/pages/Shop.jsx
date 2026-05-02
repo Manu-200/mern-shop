@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import api from '../utils/api';
 import ProductCard from '../components/product/ProductCard';
+import toast from 'react-hot-toast';
 
 const CATEGORIES = ['clothing', 'accessories', 'footwear', 'bags', 'beauty', 'home'];
 
@@ -29,7 +30,13 @@ export default function Shop() {
       setProducts(r.data.products);
       setTotal(r.data.total);
       setPages(r.data.pages);
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+      // Provide more specific feedback for deployment issues
+      if (!err.response) {
+        toast.error('Network Error: Could not connect to the API server. Please check the backend deployment.');
+      }
+    }
     finally { setLoading(false); }
   }, [category, sort, search, page]);
 
