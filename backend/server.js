@@ -8,6 +8,13 @@ dotenv.config();
 
 const app = express();
 
+// Check for CLIENT_URL in production
+if (process.env.NODE_ENV === 'production' && !process.env.CLIENT_URL) {
+  console.error('❌ FATAL ERROR: CLIENT_URL is not defined for the production environment.');
+  console.error('This variable must be set to the URL of your deployed frontend application for CORS to work.');
+  process.exit(1);
+}
+
 // ── Middleware ────────────────────────────────────────────
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
 app.use(express.json({ limit: '10mb' }));
