@@ -84,7 +84,7 @@ function ProductModal({ product, onClose, onSaved }) {
               <input className="input" style={iStyle} value={form.name} onChange={e => set('name', e.target.value)} required />
             </div>
             <div>
-              <label className="input-label">Price (USD) *</label>
+              <label className="input-label">Price (INR) *</label>
               <input className="input" style={iStyle} type="number" min="0" step="0.01" value={form.price} onChange={e => set('price', e.target.value)} required />
             </div>
             <div>

@@ -3,9 +3,9 @@ import { useCart } from '../context/CartContext';
 import { fmt } from '../utils/format';
 import toast from 'react-hot-toast';
 
-const TAX_RATE     = 0.08;
-const FREE_SHIP    = 100;
-const SHIP_COST    = 9.99;
+const TAX_RATE     = 0.18; // Updated for GST
+const FREE_SHIP    = 8000;
+const SHIP_COST    = 150;
 
 export default function Cart() {
   const { cart, subtotal, itemCount, updateItem, removeItem, loading } = useCart();
@@ -87,15 +87,15 @@ export default function Cart() {
             {/* Summary */}
             <div style={{ background: 'var(--warm-white)', padding: 32, position: 'sticky', top: 90 }}>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 300, marginBottom: 28 }}>Order Summary</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 24 }}>
-                {[['Subtotal', fmt(subtotal)], ['Shipping', subtotal >= FREE_SHIP ? 'Free' : fmt(SHIP_COST)], ['Tax (8%)', fmt(tax)]].map(([l, v]) => (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 24, fontSize: 14 }}>
+                {[['Subtotal', fmt(subtotal)], ['Shipping', subtotal >= FREE_SHIP ? 'Free' : fmt(shippingCost)], ['GST (18%)', fmt(tax)]].map(([l, v]) => (
                   <div key={l} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14 }}>
                     <span style={{ color: 'var(--ink-faint)' }}>{l}</span>
                     <span>{v}</span>
                   </div>
                 ))}
                 {subtotal < FREE_SHIP && (
-                  <p style={{ fontSize: 12, color: 'var(--accent-dk)', fontStyle: 'italic' }}>
+                  <p style={{ fontSize: 13, color: 'var(--accent-dk)', fontStyle: 'italic', marginTop: 4 }}>
                     Add {fmt(FREE_SHIP - subtotal)} more for free shipping
                   </p>
                 )}

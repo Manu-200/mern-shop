@@ -6,9 +6,9 @@ import api from '../utils/api';
 import { fmt } from '../utils/format';
 import toast from 'react-hot-toast';
 
-const TAX_RATE = 0.08;
-const FREE_SHIP = 100;
-const SHIP_COST = 9.99;
+const TAX_RATE = 0.18; // Updated for GST
+const FREE_SHIP = 8000;
+const SHIP_COST = 150;
 
 const Field = ({ label, children }) => (
   <div>
@@ -23,7 +23,7 @@ export default function Checkout() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    fullName: user?.name || '', street: '', city: '', state: '', zip: '', country: 'US',
+    fullName: user?.name || '', street: '', city: '', state: '', zip: '', country: 'IN',
     paymentMethod: 'card', notes: ''
   });
   const [placing, setPlacing] = useState(false);
@@ -71,9 +71,9 @@ export default function Checkout() {
                 </Field>
                 <Field label="Country">
                   <select className="input" value={form.country} onChange={e => set('country', e.target.value)}>
+                    <option value="IN">India</option>
                     <option value="US">United States</option>
                     <option value="CA">Canada</option>
-                    <option value="GB">United Kingdom</option>
                   </select>
                 </Field>
               </div>
@@ -139,8 +139,8 @@ export default function Checkout() {
               </div>
               <hr className="divider" />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 20 }}>
-                {[['Subtotal', fmt(subtotal)], ['Shipping', subtotal >= FREE_SHIP ? 'Free' : fmt(SHIP_COST)], ['Tax', fmt(tax)]].map(([l, v]) => (
-                  <div key={l} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14 }}>
+                {[['Subtotal', fmt(subtotal)], ['Shipping', subtotal >= FREE_SHIP ? 'Free' : fmt(shippingCost)], ['GST', fmt(tax)]].map(([l, v]) => (
+                  <div key={l} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 15 }}>
                     <span style={{ color: 'var(--ink-faint)' }}>{l}</span><span>{v}</span>
                   </div>
                 ))}

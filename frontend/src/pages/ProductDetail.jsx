@@ -177,7 +177,7 @@ export default function ProductDetail() {
             </div>
 
             <p style={{ fontSize: 12, color: 'var(--taupe)' }}>
-              {product.stock > 0 ? `${product.stock} in stock · Free shipping over $100` : 'Currently out of stock'}
+              {product.stock > 0 ? `${product.stock} in stock · Free shipping over ₹8,000` : 'Currently out of stock'}
             </p>
 
             {/* Tags */}

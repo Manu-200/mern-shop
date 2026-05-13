@@ -15,8 +15,8 @@ const products = [
   {
     name: 'Merino Wool Turtleneck',
     description: 'Luxuriously soft 100% merino wool turtleneck. Temperature-regulating, naturally odor-resistant, and crafted for lasting comfort across seasons.',
-    price: 189,
-    comparePrice: 240,
+    price: 15700,
+    comparePrice: 19900,
     category: 'clothing',
     brand: 'Loro & Co',
     images: [
@@ -35,8 +35,8 @@ const products = [
   {
     name: 'Structured Linen Blazer',
     description: 'Clean-lined linen blazer with a relaxed yet refined silhouette. Unlined for breathability. Perfect for transitional dressing.',
-    price: 320,
-    comparePrice: 420,
+    price: 26500,
+    comparePrice: 34900,
     category: 'clothing',
     brand: 'Atelier Shopshere',
     images: [
@@ -55,7 +55,7 @@ const products = [
   {
     name: 'Wide-Leg Trousers',
     description: 'High-waisted wide-leg trousers in a flowing crepe fabric. A modern wardrobe staple that pairs effortlessly with both casual and formal pieces.',
-    price: 145,
+    price: 12000,
     category: 'clothing',
     brand: 'Atelier Shopshere',
     images: [
@@ -74,8 +74,8 @@ const products = [
   {
     name: 'Leather Tote Bag',
     description: 'Full-grain vegetable-tanned leather tote. Develops a beautiful patina over time. Fits a 15" laptop. Hand-stitched with brass hardware.',
-    price: 480,
-    comparePrice: 580,
+    price: 39800,
+    comparePrice: 48000,
     category: 'bags',
     brand: 'Cuir du Nord',
     images: [
@@ -93,7 +93,7 @@ const products = [
   {
     name: 'Crossbody Mini Bag',
     description: 'Compact pebbled leather crossbody with an adjustable strap. Holds your essentials with elegant ease.',
-    price: 210,
+    price: 17400,
     category: 'bags',
     brand: 'Cuir du Nord',
     images: [
@@ -111,8 +111,8 @@ const products = [
   {
     name: 'Chunky Knit Cardigan',
     description: 'Oversized chunky-knit cardigan in a heavyweight boucle blend. The kind of piece you reach for every time the temperature drops.',
-    price: 225,
-    comparePrice: 280,
+    price: 18700,
+    comparePrice: 23200,
     category: 'clothing',
     brand: 'Loro & Co',
     images: [
@@ -131,8 +131,8 @@ const products = [
   {
     name: 'Suede Chelsea Boots',
     description: 'Pull-on suede Chelsea boots with a stacked leather heel. Water-resistant treatment. Cushioned insole for all-day comfort.',
-    price: 395,
-    comparePrice: 480,
+    price: 32800,
+    comparePrice: 39800,
     category: 'footwear',
     brand: 'Nord Sole',
     images: [
@@ -151,7 +151,7 @@ const products = [
   {
     name: 'Minimalist Sneakers',
     description: 'Clean leather sneakers with a thin vulcanized sole. No logo. No excess. Just perfect proportion and premium materials.',
-    price: 165,
+    price: 13700,
     category: 'footwear',
     brand: 'Nord Sole',
     images: [
@@ -170,8 +170,8 @@ const products = [
   {
     name: 'Silk Slip Dress',
     description: 'Bias-cut silk charmeuse slip dress. Adjustable spaghetti straps, a deep V back. Effortlessly transitions from day to evening.',
-    price: 285,
-    comparePrice: 340,
+    price: 23700,
+    comparePrice: 28200,
     category: 'clothing',
     brand: 'Atelier Shopshere',
     images: [
@@ -190,7 +190,7 @@ const products = [
   {
     name: 'Cashmere Beanie',
     description: 'Pure Grade-A cashmere beanie, double-layered for extra warmth. Relaxed fit with a subtle ribbed texture.',
-    price: 95,
+    price: 7900,
     category: 'accessories',
     brand: 'Loro & Co',
     images: [
@@ -208,7 +208,7 @@ const products = [
   {
     name: 'Linen Shirt Dress',
     description: 'Oversized shirt dress in washed linen. Button-front with a belted waist option. Gets softer with every wash.',
-    price: 175,
+    price: 14500,
     category: 'clothing',
     brand: 'Atelier Shopshere',
     images: [
@@ -227,7 +227,7 @@ const products = [
   {
     name: 'Gold Chain Necklace',
     description: '18k gold-plated sterling silver paperclip chain. Lightweight and durable. Pairs beautifully with layered looks.',
-    price: 78,
+    price: 6500,
     category: 'accessories',
     brand: 'Métal Doux',
     images: [
