@@ -25,8 +25,8 @@ export default function Home() {
       {/* Hero */}
       <section className={styles.hero}>
         <img
-          src="https://images.unsplash.com/photo-1509385232078-4c29c7897429?w=1600&q=85"
-          alt="Woman in stylish clothing"
+          src="https://img.freepik.com/free-photo/black-friday-sales-elements-composition-with-copy-space_23-2148665620.jpg?semt=ais_hybrid&w=740&q=80"
+          alt="Close-up of dark clothes on hangers"
           className={styles.heroImage}
         />
         <div className={styles.heroOverlay} />
