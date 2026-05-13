@@ -1,0 +1,147 @@
+/* c:\Users\MANOJ\Desktop\mern-shop\mern-shop\mern-shop\frontend\src\pages\Shop.module.css */
+.shopPage {
+  padding: 48px 0 96px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.preTitle {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.totalPieces {
+  color: var(--ink-faint);
+  font-size: 14px;
+}
+
+.filtersBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.searchForm {
+  display: flex;
+  gap: 8px;
+}
+
+.searchInput {
+  width: 220px;
+  padding: 9px 14px;
+  font-size: 13px;
+}
+
+.categoryFilters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center on smaller screens when it wraps */
+}
+
+.categoryButton {
+  padding: 6px 14px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid var(--stone);
+  background: transparent;
+  color: var(--ink-faint);
+  transition: all 0.2s;
+}
+
+.categoryButton:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.categoryButton.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.sortSelect {
+  padding: 9px 14px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border: 1px solid var(--stone);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-body);
+  border-radius: 2px; /* Added for consistency */
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 48px 24px;
+}
+
+.noProducts {
+  text-align: center;
+  padding: 80px 0;
+  background-color: var(--warm-white);
+  border: 1px dashed var(--stone);
+  border-radius: 4px;
+}
+
+.noProductsTitle {
+  font-family: var(--font-display);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.noProductsSubtitle {
+  color: var(--ink-faint);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 64px;
+}
+
+.pageButton {
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--stone);
+  background: transparent;
+  color: var(--ink);
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: 50%; /* Make it circular */
+}
+
+.pageButton:hover {
+    background: var(--warm-white);
+    border-color: var(--ink);
+}
+
+.pageButton.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--cream);
+}

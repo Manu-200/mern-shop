@@ -1,0 +1,184 @@
+/* c:\Users\MANOJ\Desktop\mern-shop\mern-shop\mern-shop\frontend\src\pages\Home.module.css */
+.hero {
+  background: var(--warm-white);
+  padding: 160px 0;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.preTitle {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 80px);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.categoriesSection {
+  padding: 96px 0 80px;
+}
+
+.categoriesHeader {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.categoriesPreTitle {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-bottom: 12px;
+}
+
+.categoriesTitle {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.categoryCard {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  display: block;
+  background: var(--warm-white);
+}
+
+.categoryCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.categoryCard:hover img {
+  transform: scale(1.06);
+}
+
+.categoryCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 21, 18, 0.55) 0%, transparent 60%);
+}
+
+.categoryCardContent {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.categoryCardLabel {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--cream);
+  font-weight: 300;
+}
+
+.categoryCardLink {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(250, 248, 245, 0.7);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.featuredSection {
+  padding: 0 0 96px;
+}
+
+.featuredHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+
+.featuredPreTitle {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-bottom: 10px;
+}
+
+.featuredTitle {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.featuredLink {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 2px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.brandPromiseSection {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 96px 0;
+}
+
+.brandPromiseContent {
+  text-align: center;
+}
+
+.brandPromiseTitle {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 1.1;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  letter-spacing: 1;
+}
+
+.brandPromiseText {
+  color: var(--taupe);
+  max-width: 480px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+}
+
+.brandPromiseButton {
+  border-color: rgba(250, 248, 245, 0.3);
+  color: var(--cream);
+}

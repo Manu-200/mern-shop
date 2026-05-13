@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import api from '../utils/api';
 import ProductCard from '../components/product/ProductCard';
 import toast from 'react-hot-toast';
+import styles from './Shop.module.css';
 
 const CATEGORIES = ['clothing', 'accessories', 'footwear', 'bags', 'beauty', 'home'];
 
@@ -54,51 +55,42 @@ export default function Shop() {
     set('search', searchInput);
   };
 
-  const selStyle = (active) => ({
-    padding: '6px 14px', fontSize: 11, letterSpacing: 1.5, textTransform: 'uppercase', fontWeight: 500,
-    cursor: 'pointer', borderRadius: '2px', border: active ? '1px solid var(--ink)' : '1px solid var(--stone)',
-    background: active ? 'var(--ink)' : 'transparent', color: active ? 'var(--cream)' : 'var(--ink-faint)',
-    transition: 'all 0.2s',
-  });
-
   return (
-    <div style={{ padding: '48px 0 96px' }}>
+    <div className={styles.shopPage}>
       <div className="container">
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 56 }}>
-          <p style={{ fontSize: 10, letterSpacing: 3, textTransform: 'uppercase', color: 'var(--taupe)', marginBottom: 12 }}>
+        <div className={styles.header}>
+          <p className={styles.preTitle}>
             {category ? category.charAt(0).toUpperCase() + category.slice(1) : 'All Products'}
           </p>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 52, fontWeight: 300, marginBottom: 8 }}>
+          <h1 className={styles.title}>
             {category ? category.charAt(0).toUpperCase() + category.slice(1) : 'The Collection'}
           </h1>
-          <p style={{ color: 'var(--ink-faint)', fontSize: 14 }}>{total} pieces</p>
+          <p className={styles.totalPieces}>{total} pieces</p>
         </div>
 
         {/* Filters bar */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
+        <div className={styles.filtersBar}>
           {/* Search */}
-          <form onSubmit={handleSearch} style={{ display: 'flex', gap: 8 }}>
-            <input className="input" placeholder="Search pieces…" value={searchInput}
+          <form onSubmit={handleSearch} className={styles.searchForm}>
+            <input className={`input ${styles.searchInput}`} placeholder="Search pieces…" value={searchInput}
               onChange={e => setSearchInput(e.target.value)}
-              style={{ width: 220, padding: '9px 14px', fontSize: 13 }} />
+            />
             <button type="submit" className="btn btn-dark btn-sm">Search</button>
           </form>
 
           {/* Categories */}
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            <button style={selStyle(!category)} onClick={() => set('category', '')}>All</button>
+          <div className={styles.categoryFilters}>
+            <button className={`${styles.categoryButton} ${!category ? styles.active : ''}`} onClick={() => set('category', '')}>All</button>
             {CATEGORIES.map(c => (
-              <button key={c} style={selStyle(category === c)} onClick={() => set('category', c)}>
+              <button key={c} className={`${styles.categoryButton} ${category === c ? styles.active : ''}`} onClick={() => set('category', c)}>
                 {c.charAt(0).toUpperCase() + c.slice(1)}
               </button>
             ))}
           </div>
 
           {/* Sort */}
-          <select
-            value={sort} onChange={e => set('sort', e.target.value)}
-            style={{ padding: '9px 14px', fontSize: 12, letterSpacing: 1, border: '1px solid var(--stone)', background: 'transparent', cursor: 'pointer', fontFamily: 'var(--font-body)' }}>
+          <select value={sort} onChange={e => set('sort', e.target.value)} className={styles.sortSelect}>
             <option value="newest">Newest</option>
             <option value="popular">Most Popular</option>
             <option value="price-asc">Price: Low to High</option>
@@ -111,23 +103,21 @@ export default function Shop() {
         {loading ? (
           <div className="page-loader"><div className="spinner" /></div>
         ) : products.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: '80px 0' }}>
-            <p style={{ fontFamily: 'var(--font-display)', fontSize: 32, marginBottom: 12 }}>No pieces found</p>
-            <p style={{ color: 'var(--ink-faint)' }}>Try a different search or category</p>
+          <div className={styles.noProducts}>
+            <p className={styles.noProductsTitle}>No pieces found</p>
+            <p className={styles.noProductsSubtitle}>Try a different search or category</p>
           </div>
         ) : (
-          <div className="stagger" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '48px 24px' }}>
+          <div className={`stagger ${styles.productGrid}`}>
             {products.map(p => <ProductCard key={p._id} product={p} />)}
           </div>
         )}
 
         {/* Pagination */}
         {pages > 1 && (
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginTop: 64 }}>
+          <div className={styles.pagination}>
             {Array.from({ length: pages }, (_, i) => i + 1).map(n => (
-              <button key={n} onClick={() => { const next = new URLSearchParams(searchParams); next.set('page', n); setSearchParams(next); }}
-                style={{ width: 36, height: 36, fontSize: 13, fontWeight: 500, border: `1px solid ${n === page ? 'var(--ink)' : 'var(--stone)'}`,
-                  background: n === page ? 'var(--ink)' : 'transparent', color: n === page ? 'var(--cream)' : 'var(--ink)', transition: 'all 0.2s', cursor: 'pointer' }}>
+              <button key={n} onClick={() => { const next = new URLSearchParams(searchParams); next.set('page', n); setSearchParams(next); }} className={`${styles.pageButton} ${n === page ? styles.active : ''}`}>
                 {n}
               </button>
             ))}

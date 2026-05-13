@@ -1,0 +1,71 @@
+/* c:\Users\MANOJ\Desktop\mern-shop\mern-shop\mern-shop\frontend\src\pages\Register.module.css */
+.registerPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--warm-white);
+  padding: 40px 24px;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 420px;
+  background: var(--cream);
+  padding: 48px;
+  border: 1px solid var(--stone);
+  border-radius: 4px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--ink);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.preTitle {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.submitButton {
+  margin-top: 8px;
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+
+.loginLink a {
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  padding-bottom: 1px;
+  text-decoration: none;
+}
