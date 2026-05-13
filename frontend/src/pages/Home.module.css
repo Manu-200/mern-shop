@@ -1,4 +1,14 @@
 /* c:\Users\MANOJ\Desktop\mern-shop\mern-shop\mern-shop\frontend\src\pages\Home.module.css */
+.logo {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
 .hero {
   background: var(--warm-white);
   padding: 160px 0;

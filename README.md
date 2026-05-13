@@ -1,4 +1,4 @@
-# MAISON — MERN E-Commerce Store
+# Shopshere — MERN E-Commerce Store
 
 A production-ready, internship-level full-stack e-commerce application built with **MongoDB, Express, React, and Node.js**. Styled with a luxury editorial aesthetic.
 

@@ -26,6 +26,9 @@ export default function Home() {
       <section className={styles.hero}>
         <div className="container">
           <div className={`fade-up ${styles.heroContent}`}>
+            <div className={styles.logo}>
+              Shopshere
+            </div>
             <p className={styles.preTitle}>
               New Collection · SS 2025
             </p>
