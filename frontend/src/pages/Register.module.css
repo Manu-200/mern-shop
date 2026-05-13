@@ -22,15 +22,6 @@
   margin-bottom: 32px;
 }
 
-.logo {
-  font-family: var(--font-display);
-  font-size: 28px;
-  color: var(--ink);
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
 .preTitle {
   font-size: 10px;
   letter-spacing: 3px;

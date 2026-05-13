@@ -28,7 +28,6 @@ export default function Register() {
     <div className={styles.registerPage}>
       <div className={`fade-up ${styles.formContainer}`}>
         <div className={styles.header}>
-          <Link to="/" className={styles.logo}>Shopshere</Link>
           <p className={styles.preTitle}>New here</p>
           <h1 className={styles.title}>Create Account</h1>
         </div>

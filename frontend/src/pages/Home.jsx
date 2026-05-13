@@ -24,24 +24,25 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className={styles.hero}>
-        <div className="container">
-          <div className={`fade-up ${styles.heroContent}`}>
-            <div className={styles.logo}>
-              Shopshere
-            </div>
-            <p className={styles.preTitle}>
-              New Collection · SS 2025
-            </p>
-            <h1 className={styles.title}>
-              Dress with<br /><em>intention</em>
-            </h1>
-            <p className={styles.subtitle}>
-              Curated essentials for the considered wardrobe. Fewer, better things.
-            </p>
-            <Link to="/shop" className="btn btn-dark">
-              Explore Collection
-            </Link>
-          </div>
+        <img
+          src="https://images.unsplash.com/photo-1509385232078-4c29c7897429?w=1600&q=85"
+          alt="Woman in stylish clothing"
+          className={styles.heroImage}
+        />
+        <div className={styles.heroOverlay} />
+        <div className={`container ${styles.heroContent}`}>
+          <p className={styles.preTitle}>
+            New Collection · SS 2025
+          </p>
+          <h1 className={styles.title}>
+            Dress with<br /><em>intention</em>
+          </h1>
+          <p className={styles.subtitle}>
+            Curated essentials for the considered wardrobe. Fewer, better things.
+          </p>
+          <Link to="/shop" className="btn btn-outline" style={{ color: 'var(--cream)', borderColor: 'var(--cream)' }}>
+            Explore Collection
+          </Link>
         </div>
       </section>
 

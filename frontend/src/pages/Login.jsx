@@ -36,10 +36,6 @@ export default function Login() {
         <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=900&q=85" alt=""
           style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(26,21,18,0.3)' }} />
-        <div style={{ position: 'absolute', bottom: 48, left: 48 }}>
-          <Link to="/" style={{ fontFamily: 'var(--font-display)', fontSize: 32, color: 'var(--cream)', letterSpacing: 6, textTransform: 'uppercase' }}>Shopshere</Link>
-          <p style={{ color: 'rgba(250,248,245,0.7)', fontSize: 13, marginTop: 8 }}>Curated essentials for the considered wardrobe.</p>
-        </div>
       </div>
 
       {/* Right — form */}
