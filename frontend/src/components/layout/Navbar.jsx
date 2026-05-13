@@ -52,7 +52,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" style={{ fontFamily: 'var(--font-display)', fontSize: 26, fontWeight: 300, letterSpacing: 8, color: 'var(--ink)', textTransform: 'uppercase', textDecoration: 'none' }}>
-          Maison
+          SHOPSPHERE
         </Link>
 
         {/* Right links */}

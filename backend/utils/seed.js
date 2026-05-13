@@ -38,7 +38,7 @@ const products = [
     price: 320,
     comparePrice: 420,
     category: 'clothing',
-    brand: 'Atelier Maison',
+    brand: 'Atelier Shopshere',
     images: [
       'https://images.unsplash.com/photo-1594938298603-c8148c4b1b26?w=600&q=80',
       'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80'
@@ -57,7 +57,7 @@ const products = [
     description: 'High-waisted wide-leg trousers in a flowing crepe fabric. A modern wardrobe staple that pairs effortlessly with both casual and formal pieces.',
     price: 145,
     category: 'clothing',
-    brand: 'Atelier Maison',
+    brand: 'Atelier Shopshere',
     images: [
       'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80',
       'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80'
@@ -173,7 +173,7 @@ const products = [
     price: 285,
     comparePrice: 340,
     category: 'clothing',
-    brand: 'Atelier Maison',
+    brand: 'Atelier Shopshere',
     images: [
       'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80',
       'https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=600&q=80'
@@ -210,7 +210,7 @@ const products = [
     description: 'Oversized shirt dress in washed linen. Button-front with a belted waist option. Gets softer with every wash.',
     price: 175,
     category: 'clothing',
-    brand: 'Atelier Maison',
+    brand: 'Atelier Shopshere',
     images: [
       'https://images.unsplash.com/photo-1612722432474-b971cdcea546?w=600&q=80',
       'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80'

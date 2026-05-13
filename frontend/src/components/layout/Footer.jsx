@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 48 }}>
           <div>
-            <p style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 300, letterSpacing: 6, color: 'var(--cream)', marginBottom: 16 }}>Maison</p>
+            <p style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 300, letterSpacing: 6, color: 'var(--cream)', marginBottom: 16 }}>Shopshere</p>
             <p style={{ fontSize: 13, lineHeight: 1.8, maxWidth: 260 }}>
               Carefully curated wardrobe essentials. Timeless quality, thoughtful design.
             </p>
@@ -31,7 +31,7 @@ export default function Footer() {
           ))}
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <p style={{ fontSize: 12 }}>© {new Date().getFullYear()} Maison. All rights reserved.</p>
+          <p style={{ fontSize: 12 }}>© {new Date().getFullYear()} Shopshere. All rights reserved.</p>
         </div>
       </div>
     </footer>
